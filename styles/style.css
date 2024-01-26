@@ -11,9 +11,10 @@
 }
 
 :root {
-  --cor-primaria: #f5f5f5;
-  --cor-secundaria: #ffffff;
-  --cor-tercearia: #000000;
+  --cor-primaria: #f3f5fc;
+  --cor-secundaria: #d8dfe8;
+  --cor-tercearia: #0a3871;
+  --cor-quaternaria: #ffffff;
 
   --fonte-primaria: "Inter", sans-serif;
 }
@@ -23,8 +24,10 @@ body {
   height: 100dvh;
 
   font-family: var(--fonte-primaria);
+  font-weight: 400;
 
-  color: black;
+  background-color: var(--cor-primaria);
+  color: #000000;
 }
 
 .container {
@@ -42,8 +45,6 @@ body {
   justify-content: center;
 
   padding-top: 3rem;
-
-  background-color: gray;
 }
 
 .container__header > img {
@@ -51,12 +52,10 @@ body {
   height: 3rem;
 }
 
-main {
-  display: flex;
-}
-
 .container__main {
   width: 90%;
+
+  display: flex;
 }
 
 section {
@@ -64,8 +63,6 @@ section {
   flex-direction: column;
 
   height: 100%;
-
-  background-color: aqua;
 }
 
 .container__section__input {
@@ -73,8 +70,95 @@ section {
 
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+}
 
-  border-right: 1px solid black;
+textarea#text-input {
+  width: 78%;
+  height: 70%;
+
+  font-size: 2rem;
+  line-height: 3rem;
+
+  padding: 1rem;
+
+  color: var(--cor-tercearia);
+  border: none;
+  border-radius: 2rem;
+}
+
+::placeholder {
+  color: var(--cor-tercearia);
+}
+
+#input-warning {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 0.75rem;
+
+  opacity: 0.8;
+}
+
+.warning {
+  margin-right: 0.3rem;
+
+  opacity: 1;
+}
+
+.container__section__input__buttons {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1.5rem;
+}
+
+.container__section__input__buttons > button {
+  width: 20.5rem;
+
+  font-family: var(--fonte-primaria);
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+
+  padding: 1.5rem;
+
+  cursor: pointer;
+
+  border: 1px solid var(--cor-tercearia);
+  border-radius: 1.5rem;
+}
+
+#btn-criptografar {
+  background-color: var(--cor-tercearia);
+  color: var(--cor-quaternaria);
+}
+
+@keyframes criptografar {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
+#btn-criptografar:hover {
+  animation: criptografar 0.5s linear;
+}
+
+#btn-descriptografar {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-tercearia);
+}
+
+#btn-criptografar:hover {
+  opacity: 0.9;
 }
 
 .container__section__output {
@@ -95,7 +179,7 @@ section {
 
   border-radius: 2rem;
 
-  background-color: white;
+  background-color: var(--cor-quaternaria);
 }
 
 .container__section__output__console__content {
@@ -121,7 +205,7 @@ section {
   text-align: center;
 }
 
-footer {
+.footer {
   width: 100%;
   height: 6%;
 
@@ -129,5 +213,6 @@ footer {
   justify-content: center;
   align-items: center;
 
-  background-color: brown;
+  background-color: var(--cor-tercearia);
+  color: var(--cor-secundaria);
 }

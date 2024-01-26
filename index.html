@@ -13,7 +13,27 @@
       </header>
 
       <main class="container__main">
-        <section class="container__section__input">SECAO 1</section>
+        <section class="container__section__input">
+          <textarea
+            name="text-input"
+            id="text-input"
+            cols="30"
+            rows="10"
+            placeholder="Digite seu texto"
+          ></textarea>
+
+          <p id="input-warning">
+            <img src="./assets/images/aviso.svg" class="warning" />Apenas letras
+            minúsculas e sem acento.
+          </p>
+
+          <div class="container__section__input__buttons">
+            <button type="button" id="btn-criptografar">Criptografar</button>
+            <button type="button" id="btn-descriptografar">
+              Descriptografar
+            </button>
+          </div>
+        </section>
 
         <section class="container__section__output">
           <div class="container__section__output__console">
@@ -32,8 +52,10 @@
       </main>
     </div>
 
-    <footer>
-      <p>Desenvolvido por <strong>Gustavo Pimenta Ribeiro</strong></p>
+    <footer class="footer">
+      <p class="footer__text">
+        Desenvolvido por <strong>Gustavo Pimenta Ribeiro</strong>
+      </p>
     </footer>
   </body>
 </html>
