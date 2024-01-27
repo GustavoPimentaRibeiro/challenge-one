@@ -28,8 +28,18 @@
           </p>
 
           <div class="container__section__input__buttons">
-            <button type="button" id="btn-criptografar">Criptografar</button>
-            <button type="button" id="btn-descriptografar">
+            <button
+              type="button"
+              id="btn-criptografar"
+              onclick="criptografarTexto()"
+            >
+              Criptografar
+            </button>
+            <button
+              type="button"
+              id="btn-descriptografar"
+              onclick="descriptografarTexto()"
+            >
               Descriptografar
             </button>
           </div>
@@ -39,13 +49,20 @@
           <div class="container__section__output__console">
             <div class="container__section__output__console__content">
               <img
+                id="image-output"
                 src="./assets/images/imagem.svg"
                 alt="Imagem de um homem segurando uma lupa"
               />
               <h2 id="output-warning">Nenhuma mensagem encontrada</h2>
-              <p id="output-text">
+              <p id="text-output">
                 Digite um texto que você deseja criptografar ou descriptografar.
               </p>
+            </div>
+            <div class="container__section__output__console__result">
+              <p id="text-result"></p>
+              <button type="button" id="btn-copy" onclick="copiarTexto()">
+                Copiar
+              </button>
             </div>
           </div>
         </section>
@@ -57,5 +74,7 @@
         Desenvolvido por <strong>Gustavo Pimenta Ribeiro</strong>
       </p>
     </footer>
+
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
