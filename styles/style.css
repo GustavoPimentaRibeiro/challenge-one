@@ -85,10 +85,13 @@ textarea#text-input {
   color: var(--cor-tercearia);
   border: none;
   border-radius: 2rem;
+
+  resize: none;
 }
 
 ::placeholder {
   color: var(--cor-tercearia);
+  opacity: 0.4;
 }
 
 #input-warning {
