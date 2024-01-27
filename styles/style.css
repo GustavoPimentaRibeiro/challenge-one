@@ -137,27 +137,22 @@ textarea#text-input {
 #btn-criptografar {
   background-color: var(--cor-tercearia);
   color: var(--cor-quaternaria);
-}
 
-@keyframes criptografar {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.8;
-  }
-}
-
-#btn-criptografar:hover {
-  animation: criptografar 0.5s linear;
+  transition: opacity 0.2s ease, padding 0.4s ease, width 0.4s ease;
 }
 
 #btn-descriptografar {
   background-color: var(--cor-secundaria);
   color: var(--cor-tercearia);
+
+  transition: opacity 0.2s ease, padding 0.4s ease, width 0.4s ease;
 }
 
-#btn-criptografar:hover {
+#btn-criptografar:hover,
+#btn-descriptografar:hover {
+  width: 21rem;
+  padding: 1.7rem;
+
   opacity: 0.9;
 }
 
