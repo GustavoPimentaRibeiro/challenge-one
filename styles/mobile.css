@@ -1,9 +1,5 @@
-@media (max-width: 425px) {
-  .container__section__input {
-    width: 100%;
-  }
-
-  .container__section__output {
-    width: 100%;
+@media (max-width: 375px) {
+  .container__section__input__buttons {
+    flex-direction: column;
   }
 }
