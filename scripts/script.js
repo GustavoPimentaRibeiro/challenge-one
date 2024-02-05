@@ -83,5 +83,5 @@ function copiarTexto() {
 
 function verificarEntrada(entrada) {
   const input = document.getElementById("text-input");
-  input.value = input.value.replace(/[^a-z]/g, '');
+  input.value = input.value.replace(/[^a-z ]/g, '');
 }
