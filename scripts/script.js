@@ -80,3 +80,8 @@ function copiarTexto() {
 
   navigator.clipboard.writeText(textoDiv.innerText);
 }
+
+function verificarEntrada(entrada) {
+  const input = document.getElementById("text-input");
+  input.value = input.value.replace(/[^a-z]/g, '');
+}
