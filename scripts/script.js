@@ -41,11 +41,10 @@ function criptografarTexto() {
 function trocarLetrasDescriptografar(texto) {
   let caracteres = { enter: "e", imes: "i", ai: "a", ober: "o", ufat: "u" };
 
-  for (let c in caracteres) {
-    if (texto.includes(c)) {
-      texto = texto.replaceAll(c, caracteres[c]);
-    }
-  }
+  texto = Object.keys(caracteres).reduce(
+    (acc, key) => acc.replaceAll(key, caracteres[key]),
+    texto
+  );
 
   return texto;
 }
@@ -83,5 +82,5 @@ function copiarTexto() {
 
 function verificarEntrada(entrada) {
   const input = document.getElementById("text-input");
-  input.value = input.value.replace(/[^a-z ]/g, '');
+  input.value = input.value.replace(/[^a-z ]/g, "");
 }
